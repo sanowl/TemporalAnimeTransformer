@@ -185,7 +185,7 @@ class TemporalAnimeTransformer:
         anime_frames = []
         for i in range(0, len(video_frames) - self.sequence_length + 1):
             sequence = video_frames[i:i+self.sequence_length]
-            sequence = np.array(sequence) / 127.5 - 1  # Normalize to [-1, 1]
+            sequence = np.array(sequence) / 127.5 - 1  
             sequence = np.expand_dims(sequence, axis=0)
             
             anime_style_image = np.array(anime_style_image) / 127.5 - 1
